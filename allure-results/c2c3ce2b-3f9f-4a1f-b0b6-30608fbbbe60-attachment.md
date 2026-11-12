@@ -1,0 +1,728 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: TC003.spec.ts >> TC003
+- Location: tests\TC003.spec.ts:2:1
+
+# Error details
+
+```
+Error: locator.click: Error: strict mode violation: locator('//a[@title = \'HTML Tutorial\']') resolved to 3 elements:
+    1) <a title="HTML Tutorial" href="/html/default.asp" class="ga-nav subtopnav_firstitem">HTML</a> aka getByRole('link', { name: 'HTML', exact: true })
+    2) <a title="HTML Tutorial" href="/html/default.asp" class="panel-learn ga-fp ga-fp-html-default">Learn HTML</a> aka getByRole('link', { name: 'Learn HTML' })
+    3) <a data-name="html" title="HTML Tutorial" href="/html/default.asp" class="tcard ga-fp ga-fp-lang-html">…</a> aka getByRole('link', { name: 'HTML The building blocks of' })
+
+Call log:
+  - waiting for locator('//a[@title = \'HTML Tutorial\']')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic:
+    - generic [ref=e2]:
+      - link "Home link" [ref=e3] [cursor=pointer]:
+        - /url: https://www.w3schools.com
+        - generic [aria-hidden] [ref=e4]: 
+      - navigation [ref=e5]:
+        - button "Tutorials" [ref=e6] [cursor=pointer]:
+          - text: Tutorials
+          - generic [aria-hidden] [ref=e7]: 
+          - text: 
+        - button "References" [ref=e8] [cursor=pointer]:
+          - text: References
+          - generic [aria-hidden] [ref=e9]: 
+          - text: 
+        - button "Exercises" [ref=e10] [cursor=pointer]:
+          - text: Exercises
+          - generic [aria-hidden] [ref=e11]: 
+          - text: 
+        - button "Certificates" [ref=e12] [cursor=pointer]:
+          - text: Certificates
+          - generic [aria-hidden] [ref=e13]: 
+          - text: 
+      - text:  
+      - generic [ref=e15]:
+        - generic [ref=e16]: Search field
+        - textbox "Search field" [ref=e17]:
+          - /placeholder: Search...
+        - button "Button to search" [ref=e18] [cursor=pointer]
+      - button "All our services" [ref=e22] [cursor=pointer]
+      - generic [ref=e25]:
+        - link "W3Schools Adventure App - iOS and Android" [ref=e26] [cursor=pointer]:
+          - /url: /adventure/index.php
+          - generic [ref=e27]: NEW
+          - generic [ref=e28]:
+            - generic [ref=e29]: W3Schools app
+            - generic [ref=e30]: Start the adventure
+        - button "Sign in to your account" [ref=e31] [cursor=pointer]: Sign In
+        - link "Become a PLUS user and unlock powerful features" [ref=e32] [cursor=pointer]:
+          - /url: https://order.w3schools.com/plans
+          - text: Upgrade
+        - link "W3Schools Paid Courses" [ref=e33] [cursor=pointer]:
+          - /url: https://campus.w3schools.com/collections/course-catalog
+          - text: Paid Courses
+    - text:      
+    - generic: Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate Certificate 
+  - generic [ref=e37]:
+    - generic [ref=e38] [cursor=pointer]: ❯
+    - generic: 
+    - link "HTML" [ref=e40]:
+      - /url: /html/default.asp
+    - link "CSS" [ref=e41]:
+      - /url: /css/default.asp
+    - link "JAVASCRIPT" [ref=e42]:
+      - /url: /js/default.asp
+    - link "SQL" [ref=e43]:
+      - /url: /sql/default.asp
+    - link "PYTHON" [ref=e44]:
+      - /url: /python/default.asp
+    - link "JAVA" [ref=e45]:
+      - /url: /java/default.asp
+    - link "PHP" [ref=e46]:
+      - /url: /php/default.asp
+    - link "C" [ref=e47]:
+      - /url: /c/index.php
+    - link "C++" [ref=e48]:
+      - /url: /cpp/default.asp
+    - link "C#" [ref=e49]:
+      - /url: /cs/index.php
+    - link "AWS" [ref=e50]:
+      - /url: /aws/index.php
+    - link "W3.CSS" [ref=e51]:
+      - /url: /w3css/default.asp
+    - link "HOW TO" [ref=e52]:
+      - /url: /howto/default.asp
+    - link "BOOTSTRAP" [ref=e53]:
+      - /url: /bootstrap/bootstrap_ver.asp
+    - link "REACT" [ref=e54]:
+      - /url: /react/default.asp
+    - link "MYSQL" [ref=e55]:
+      - /url: /mysql/default.asp
+    - link "JQUERY" [ref=e56]:
+      - /url: /jquery/default.asp
+    - link "EXCEL" [ref=e57]:
+      - /url: /excel/index.php
+    - link "XML" [ref=e58]:
+      - /url: /xml/default.asp
+    - link "DJANGO" [ref=e59]:
+      - /url: /django/index.php
+    - link "NUMPY" [ref=e60]:
+      - /url: /python/numpy/default.asp
+    - link "PANDAS" [ref=e61]:
+      - /url: /python/pandas/default.asp
+    - link "NODEJS" [ref=e62]:
+      - /url: /nodejs/default.asp
+    - link "DSA" [ref=e63]:
+      - /url: /dsa/index.php
+    - link "TYPESCRIPT" [ref=e64]:
+      - /url: /typescript/index.php
+    - link "ANGULAR" [ref=e65]:
+      - /url: /angular/default.asp
+    - link "ANGULARJS" [ref=e66]:
+      - /url: /angularjs/default.asp
+    - link "GIT" [ref=e67]:
+      - /url: /git/default.asp
+    - link "POSTGRESQL" [ref=e68]:
+      - /url: /postgresql/index.php
+    - link "MONGODB" [ref=e69]:
+      - /url: /mongodb/index.php
+    - link "ASP" [ref=e70]:
+      - /url: /asp/default.asp
+    - link "AI" [ref=e71]:
+      - /url: /ai/default.asp
+    - link "R" [ref=e72]:
+      - /url: /r/default.asp
+    - link "GO" [ref=e73]:
+      - /url: /go/index.php
+    - link "KOTLIN" [ref=e74]:
+      - /url: /kotlin/index.php
+    - link "SWIFT" [ref=e75]:
+      - /url: /swift/default.asp
+    - link "SASS" [ref=e76]:
+      - /url: /sass/default.asp
+    - link "VUE" [ref=e77]:
+      - /url: /vue/index.php
+    - link "GEN AI" [ref=e78]:
+      - /url: /gen_ai/index.php
+    - link "SCIPY" [ref=e79]:
+      - /url: /python/scipy/index.php
+    - link "CYBERSECURITY" [ref=e80]:
+      - /url: /cybersecurity/index.php
+    - link "DATA SCIENCE" [ref=e81]:
+      - /url: /datascience/default.asp
+    - link "INTRO TO PROGRAMMING" [ref=e82]:
+      - /url: /programming/index.php
+    - link "INTRO TO HTML & CSS" [ref=e83]:
+      - /url: /htmlcss/default.asp
+    - link "BASH" [ref=e84]:
+      - /url: /bash/index.php
+    - link "RUST" [ref=e85]:
+      - /url: /rust/index.php
+    - link "TOOLS" [ref=e86]:
+      - /url: /tools/index.php
+  - generic [ref=e91]:
+    - generic [ref=e94]:
+      - generic [ref=e95]:
+        - heading "Learn to Code" [level=1] [ref=e96]
+        - paragraph [ref=e97]: Free tutorials, examples and references.No sign-up needed, just start learning.
+        - paragraph [ref=e98]: "Or sign up to unlock premium features:"
+        - list [ref=e99]:
+          - listitem [ref=e100]: ✓ Progress tracking
+          - listitem [ref=e101]: ✓ Build & host websites
+          - listitem [ref=e102]: ✓ Ad-free learning
+          - listitem [ref=e103]: ✓ XP & Streaks
+          - listitem [ref=e104]: ✓ Practice problems
+          - listitem [ref=e105]: ✓ Leagues
+          - listitem [ref=e106]: ✓ Challenges
+          - listitem [ref=e107]: ✓ Avatar
+        - generic [ref=e108]:
+          - text: Already a member?
+          - link "Sign in" [ref=e109]:
+            - /url: https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fwww.w3schools.com%2F
+      - generic [ref=e111]:
+        - generic [ref=e115]:
+          - generic [ref=e116]:
+            - generic [ref=e117]: 12,560
+            - generic [ref=e122]:
+              - generic [ref=e123]: Keep learning. Keep leveling up.
+              - generic [ref=e124]: Track your progress and achieve more.
+            - generic [ref=e125]:
+              - generic [ref=e126]:
+                - generic [ref=e127]: XP this week
+                - generic [ref=e128]: "850"
+              - generic [ref=e130]:
+                - generic [ref=e135]: "7"
+                - generic [ref=e136]: Day streak
+          - generic [ref=e140]:
+            - generic [ref=e141]: Build & host sites
+            - generic [ref=e142]: Your own Spaces, live on the web
+          - generic [ref=e144]:
+            - generic [ref=e145]: Weekly practice
+            - generic [ref=e146]: Fresh problems & bonus XP
+          - generic [ref=e147]:
+            - link "› ›" [ref=e148]:
+              - /url: /league/
+              - generic [ref=e149]:
+                - generic [ref=e150]: ›
+                - generic [ref=e151]: ›
+            - generic [ref=e152]:
+              - link "Climb the leagues" [ref=e154]:
+                - /url: /league/
+              - generic [ref=e155]: From Wood to Master Coder
+          - generic [ref=e162]:
+            - generic [ref=e163]: Ad-free learning
+            - generic [ref=e164]: Focus with zero distractions
+          - generic [ref=e169]:
+            - generic [ref=e170]: Customize your avatar
+            - generic [ref=e171]: Unlock gear, moods & rare skins
+        - link "Sign in" [ref=e172]:
+          - /url: https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fwww.w3schools.com%2F
+        - generic [ref=e173]:
+          - button "Slide 1" [ref=e174] [cursor=pointer]
+          - button "Slide 2" [ref=e175] [cursor=pointer]
+          - button "Slide 3" [ref=e176] [cursor=pointer]
+          - button "Slide 4" [ref=e177] [cursor=pointer]
+          - button "Slide 5" [ref=e178] [cursor=pointer]
+          - button "Slide 6" [ref=e179] [cursor=pointer]
+    - generic [ref=e180]:
+      - banner [ref=e181]
+      - generic [ref=e184]:
+        - generic [ref=e185]:
+          - paragraph [ref=e186]: New
+          - heading "W3Schools Adventure App" [level=2] [ref=e187]: W3SchoolsAdventure App
+          - paragraph [ref=e188]: The W3Schools Adventure app is here! Coding fundamentals as a game. Bite-sized lessons, streaks and XP.Free on iOS and Android.
+          - generic [ref=e189]:
+            - link "Download on the App Store" [ref=e190]:
+              - /url: https://apps.apple.com/us/app/w3schools/id6770531503
+              - img [ref=e191]:
+                - generic [ref=e195]: Download on the
+                - generic [ref=e196]: App Store
+            - link "Get it on Google Play" [ref=e197]:
+              - /url: https://play.google.com/store/apps/details?id=com.w3schools.app.prod
+              - img [ref=e198]:
+                - generic [ref=e205]: GET IT ON
+                - generic [ref=e206]: Google Play
+            - link "Try now in Browser" [ref=e207]:
+              - /url: https://app.w3schools.com/
+              - img [ref=e208]:
+                - generic [ref=e211]: TRY NOW IN
+                - generic [ref=e212]: Browser
+          - link "Learn more about the app ›" [ref=e213]:
+            - /url: /adventure/
+        - generic [ref=e214]:
+          - img "A lesson in the W3Schools Adventure app" [ref=e216]
+          - img "The Lynx mascot" [ref=e217]
+      - generic [ref=e219]:
+        - generic [ref=e220]:
+          - paragraph [ref=e221]: Tutorials
+          - heading "What do you want to learn?" [level=2] [ref=e222]
+          - paragraph [ref=e223]: "Pick a language and start right away. Every tutorial is packed with examples you can run and edit in your browser:"
+        - generic [ref=e224]:
+          - generic [ref=e225]:
+            - button "Show previous example topics" [disabled] [ref=e226]
+            - tablist "Tutorial examples" [ref=e227]:
+              - tab "HTML" [selected] [ref=e228] [cursor=pointer]
+              - tab "CSS" [ref=e233] [cursor=pointer]
+              - tab "JavaScript" [ref=e238] [cursor=pointer]
+              - tab "Python" [ref=e243] [cursor=pointer]
+              - tab "SQL" [ref=e251] [cursor=pointer]
+              - tab "Java" [ref=e256] [cursor=pointer]
+              - tab "C" [ref=e265] [cursor=pointer]
+              - tab "C++" [ref=e270] [cursor=pointer]
+              - tab "C#" [ref=e275] [cursor=pointer]
+              - tab "PHP" [ref=e282] [cursor=pointer]
+              - tab "React" [ref=e287] [cursor=pointer]
+              - tab "W3.CSS" [ref=e292] [cursor=pointer]:
+                - img [ref=e294]:
+                  - generic [ref=e296]: W3
+              - tab "Bootstrap 5" [ref=e298] [cursor=pointer]
+              - tab "MySQL" [ref=e304] [cursor=pointer]
+              - tab "jQuery" [ref=e311] [cursor=pointer]
+              - tab "DSA" [ref=e317] [cursor=pointer]
+              - tab "TypeScript" [ref=e328] [cursor=pointer]
+              - tab "Swift" [ref=e334] [cursor=pointer]
+              - tab "AngularJS" [ref=e340] [cursor=pointer]
+              - tab "R" [ref=e346] [cursor=pointer]
+              - tab "Rust" [ref=e353] [cursor=pointer]
+            - button "Show more example topics" [ref=e359] [cursor=pointer]
+          - tabpanel "HTML" [ref=e362]:
+            - generic [ref=e363]:
+              - generic [ref=e364]: HTML example
+              - generic "HTML code example" [ref=e371]:
+                - text: <!DOCTYPE html>
+                - generic [ref=e372]: <html>
+                - generic [ref=e373]: <head>
+                - generic [ref=e374]: <title>
+                - text: HTML Tutorial
+                - generic [ref=e375]: </title>
+                - generic [ref=e376]: </head>
+                - generic [ref=e377]: <body>
+                - generic [ref=e378]: <h1>
+                - text: This is a heading
+                - generic [ref=e379]: </h1>
+                - generic [ref=e380]: <p>
+                - text: This is a paragraph.
+                - generic [ref=e381]: </p>
+                - generic [ref=e382]: </body>
+                - generic [ref=e383]: </html>
+              - link "Try it Yourself »" [ref=e384] [cursor=pointer]:
+                - /url: /html/tryit.asp?filename=tryhtml_default_default
+            - generic [ref=e385]:
+              - link "Learn HTML" [ref=e386]:
+                - /url: /html/default.asp
+              - link "HTML Reference" [ref=e387]:
+                - /url: /tags/default.asp
+              - link "HTML Certificate" [ref=e388]:
+                - /url: https://campus.w3schools.com/collections/certifications/products/html-certificate
+        - heading "All languages" [level=3] [ref=e390]
+        - generic [ref=e391]:
+          - link [ref=e392]:
+            - /url: /html/default.asp
+            - heading "HTML" [level=3] [ref=e395]
+            - paragraph [ref=e396]: The building blocks of every webpage
+          - link [ref=e397]:
+            - /url: /css/default.asp
+            - heading "CSS" [level=3] [ref=e401]
+            - paragraph [ref=e402]: Style and layout for web pages
+          - link [ref=e403]:
+            - /url: /js/default.asp
+            - heading "JavaScript" [level=3] [ref=e406]
+            - paragraph [ref=e407]: Interactive and dynamic web pages
+          - link [ref=e408]:
+            - /url: /sql/default.asp
+            - heading "SQL" [level=3] [ref=e412]
+            - paragraph [ref=e413]: Query and manage databases
+          - link [ref=e414]:
+            - /url: /python/default.asp
+            - heading "Python" [level=3] [ref=e421]
+            - paragraph [ref=e422]: Popular language for web, data & AI
+          - link [ref=e423]:
+            - /url: /java/default.asp
+            - heading "Java" [level=3] [ref=e431]
+            - paragraph [ref=e432]: Object-oriented programming language
+          - link [ref=e433]:
+            - /url: /c/index.php
+            - heading "C" [level=3] [ref=e437]
+            - paragraph [ref=e438]: A powerful general-purpose language
+          - link [ref=e439]:
+            - /url: /cpp/default.asp
+            - heading "C++" [level=3] [ref=e442]
+            - paragraph [ref=e443]: The language behind games & engines
+          - link [ref=e444]:
+            - /url: /cs/index.php
+            - heading "C#" [level=3] [ref=e450]
+            - paragraph [ref=e451]: Build apps, games and web services
+          - link [ref=e452]:
+            - /url: /php/default.asp
+            - heading "PHP" [level=3] [ref=e455]
+            - paragraph [ref=e456]: Server-side scripting language
+          - link [ref=e457]:
+            - /url: /react/default.asp
+            - heading "React" [level=3] [ref=e461]
+            - paragraph [ref=e462]: Build interactive user interfaces
+          - link [ref=e463]:
+            - /url: /mysql/default.asp
+            - heading "MySQL" [level=3] [ref=e468]
+            - paragraph [ref=e469]: Store and manage relational data
+          - link [ref=e470]:
+            - /url: /excel/index.php
+            - heading "Excel" [level=3] [ref=e474]
+            - paragraph [ref=e475]: Spreadsheets and data
+          - link [ref=e476]:
+            - /url: /dsa/index.php
+            - heading "DSA" [level=3] [ref=e484]
+            - paragraph [ref=e485]: Data Structures and Algorithms
+          - link "And 40+ more W3.CSS, TypeScript, Git, Django, NumPy, jQuery, Bootstrap, R, AI, Data Science and many more Browse all tutorials" [ref=e486]:
+            - /url: /tutorials/index.php
+            - generic [ref=e488]: 
+            - generic [ref=e489]:
+              - heading "And 40+ more" [level=3] [ref=e490]
+              - paragraph [ref=e491]: W3.CSS, TypeScript, Git, Django, NumPy, jQuery, Bootstrap, R, AI, Data Science and many more
+              - generic [ref=e492]: Browse all tutorials
+      - generic [ref=e495]:
+        - generic [ref=e496]:
+          - paragraph [ref=e497]: Free account
+          - heading "Save your progress. Everywhere." [level=2] [ref=e498]: Save your progress.Everywhere.
+          - paragraph [ref=e499]: Learning is free with or without an account. Sign up to keep your XP, streaks and progress, on w3schools.com and in the Adventure app.
+          - generic [ref=e500]:
+            - generic [ref=e501]:
+              - generic [ref=e502]: ✓
+              - text: Progress tracking
+            - generic [ref=e503]:
+              - generic [ref=e504]: ✓
+              - text: XP & streaks
+            - generic [ref=e505]:
+              - generic [ref=e506]: ✓
+              - text: Ad-free learning
+            - generic [ref=e507]:
+              - generic [ref=e508]: ✓
+              - text: Access to App
+            - generic [ref=e509]:
+              - generic [ref=e510]: ✓
+              - text: Challenges
+            - generic [ref=e511]:
+              - generic [ref=e512]: ✓
+              - text: Practice problems
+            - generic [ref=e513]:
+              - generic [ref=e514]: ✓
+              - text: Leagues
+            - generic [ref=e515]:
+              - generic [ref=e516]: ✓
+              - text: Build & host websites
+        - generic [ref=e518]:
+          - img "W3Schools Lynx Mascot" [ref=e519]
+          - heading "Start in one click" [level=3] [ref=e520]
+          - paragraph [ref=e521]: Create your free account and pick up where you left off, anywhere.
+          - link "Sign In" [ref=e522]:
+            - /url: https://profile.w3schools.com/login
+          - generic [ref=e523]: or
+          - link "Sign Up" [ref=e525]:
+            - /url: https://profile.w3schools.com/sign-up?redirect_url=https%3A%2F%2Fwww.w3schools.com%2F
+      - generic [ref=e527]:
+        - generic [ref=e528]:
+          - paragraph [ref=e529]: Certificates
+          - heading "Kickstart your career." [level=2] [ref=e530]
+          - paragraph [ref=e531]: Get certified by completing a course. Document your skills with a credential trusted by employers since 1999.
+          - generic [ref=e532]:
+            - link "Get certified" [ref=e533]:
+              - /url: https://campus.w3schools.com/collections/certifications
+            - link "See all certificates" [ref=e534]:
+              - /url: https://campus.w3schools.com/collections/certifications
+        - generic [ref=e536]:
+          - img [ref=e538]:
+            - generic [ref=e540]: w
+            - generic [ref=e541]: "3"
+            - generic [ref=e542]: s
+            - generic [ref=e543]: c
+            - generic [ref=e544]: h
+            - generic [ref=e545]: o
+            - generic [ref=e546]: o
+            - generic [ref=e547]: l
+            - generic [ref=e548]: s
+            - generic [ref=e549]: C
+            - generic [ref=e550]: E
+            - generic [ref=e551]: R
+            - generic [ref=e552]: T
+            - generic [ref=e553]: I
+            - generic [ref=e554]: F
+            - generic [ref=e555]: I
+            - generic [ref=e556]: E
+            - generic [ref=e557]: D
+            - generic [ref=e558]: .
+            - generic [ref=e559]: "2"
+            - generic [ref=e560]: "0"
+            - generic [ref=e561]: "2"
+            - generic [ref=e562]: "6"
+          - heading "Certified HTML Developer" [level=3] [ref=e565]
+          - paragraph [ref=e566]: Issued by W3Schools
+          - paragraph [ref=e568]: ✓Verified credential you can share
+      - generic [ref=e570]:
+        - generic [ref=e572]:
+          - generic [ref=e573]: my-portfolio.w3spaces.com
+          - generic [ref=e578]:
+            - generic [ref=e579]:
+              - tablist "Example files" [ref=e580]:
+                - tab "index.html" [selected] [ref=e581] [cursor=pointer]
+                - tab "style.css" [ref=e582] [cursor=pointer]
+              - tabpanel "index.html" [ref=e583]: <h1>My Portfolio</h1> <p>Built with Spaces.</p> <a href="#">Say hi</a>
+            - generic "Website preview" [ref=e584]:
+              - generic [ref=e585]: Preview
+              - generic [ref=e586]:
+                - paragraph [ref=e587]: My Portfolio
+                - paragraph [ref=e588]: Built with Spaces.
+                - link "Say hi" [ref=e589]:
+                  - /url: javascript:void(0)
+        - generic [ref=e590]:
+          - paragraph [ref=e591]: W3Schools Spaces
+          - heading "Build and host websites." [level=2] [ref=e592]
+          - paragraph [ref=e593]: Code directly in your browser, nothing to install. When you are ready, publish your site with one click.
+          - generic [ref=e594]:
+            - generic [ref=e595]:
+              - generic [ref=e596]: ✓
+              - text: No setup
+            - generic [ref=e597]:
+              - generic [ref=e598]: ✓
+              - text: Templates to start from
+            - generic [ref=e599]:
+              - generic [ref=e600]: ✓
+              - text: Hosting included
+          - generic [ref=e601]:
+            - link "Try Spaces" [ref=e602]:
+              - /url: /spaces/index.php
+            - link "Learn more" [ref=e603]:
+              - /url: /spaces/index.php
+      - generic [ref=e605]:
+        - paragraph [ref=e606]: Test your skills
+        - heading "Practice with W3Schools" [level=2] [ref=e607]
+        - paragraph [ref=e608]: Exercises, quizzes and a new coding challenge every week.
+        - generic [ref=e609]:
+          - link "Exercises" [ref=e610]:
+            - /url: /exercises/index.php
+          - link "Quizzes" [ref=e611]:
+            - /url: /quiztest/default.asp
+          - link "Weekly problem" [ref=e612]:
+            - /url: /practice/index.php
+  - generic [ref=e615]:
+    - generic [ref=e616]:
+      - generic:
+        - img "This way to the W3Schools Adventure app"
+        - link "Learn more about Adventure Mode›" [ref=e619]:
+          - /url: /adventure/
+      - generic [ref=e620]:
+        - generic [ref=e622]:
+          - paragraph [ref=e623]: Free account
+          - heading "Track your progress" [level=2] [ref=e624]
+          - generic [ref=e625]:
+            - generic [ref=e626]:
+              - text: XP earned
+              - generic [ref=e627]: "0"
+            - generic [ref=e628]:
+              - text: Day streak
+              - generic [ref=e629]: "0"
+            - generic [ref=e630]:
+              - text: Spaces
+              - generic [ref=e631]: "0"
+            - generic [ref=e632]:
+              - text: League
+              - generic [ref=e633]: —
+          - link "Sign in to track progress" [ref=e635]:
+            - /url: https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fwww.w3schools.com%2F
+        - generic [ref=e636]:
+          - paragraph [ref=e637]: New
+          - heading "Learn in Adventure Mode" [level=2] [ref=e638]
+          - paragraph [ref=e639]: Coding fundamentals as bite-sized lessons and challenges.
+          - generic [ref=e641]:
+            - link "Download on the App Store" [ref=e642]:
+              - /url: https://apps.apple.com/us/app/w3schools/id6770531503
+              - img [ref=e643]:
+                - generic [ref=e647]: Download on the
+                - generic [ref=e648]: App Store
+            - link "Get it on Google Play" [ref=e649]:
+              - /url: https://play.google.com/store/apps/details?id=com.w3schools.app.prod
+              - img [ref=e650]:
+                - generic [ref=e657]: GET IT ON
+                - generic [ref=e658]: Google Play
+            - link "Try Adventure Mode now in your browser" [ref=e659]:
+              - /url: https://app.w3schools.com/
+              - img [ref=e660]:
+                - generic [ref=e663]: TRY NOW IN
+                - generic [ref=e664]: Browser
+    - generic [ref=e665]:
+      - generic [ref=e666]:
+        - link "W3Schools.com" [ref=e668]:
+          - /url: //www.w3schools.com
+          - generic [ref=e669]: 
+        - link "PLUS" [ref=e671]:
+          - /url: https://order.w3schools.com/plans
+        - link "SPACES" [ref=e673]:
+          - /url: /spaces/index.php
+        - link "GET CERTIFIED" [ref=e675]:
+          - /url: https://campus.w3schools.com/collections/certifications
+        - link "FOR TEACHERS" [ref=e677]:
+          - /url: https://campus.w3schools.com/pages/for-teams
+        - link "PRACTICE" [ref=e679]:
+          - /url: /practice/index.php
+        - link "CONTACT US" [ref=e681]:
+          - /url: javascript:void(0);
+      - generic [ref=e682]:
+        - generic [ref=e683]:
+          - heading "Top Tutorials" [level=5] [ref=e684]
+          - link "HTML Tutorial" [ref=e685]:
+            - /url: /html/default.asp
+          - link "CSS Tutorial" [ref=e686]:
+            - /url: /css/default.asp
+          - link "JavaScript Tutorial" [ref=e687]:
+            - /url: /js/default.asp
+          - link "How To Tutorial" [ref=e688]:
+            - /url: /howto/default.asp
+          - link "SQL Tutorial" [ref=e689]:
+            - /url: /sql/default.asp
+          - link "Python Tutorial" [ref=e690]:
+            - /url: /python/default.asp
+          - link "W3.CSS Tutorial" [ref=e691]:
+            - /url: /w3css/default.asp
+          - link "Bootstrap Tutorial" [ref=e692]:
+            - /url: /bootstrap/bootstrap_ver.asp
+          - link "PHP Tutorial" [ref=e693]:
+            - /url: /php/default.asp
+          - link "Java Tutorial" [ref=e694]:
+            - /url: /java/default.asp
+          - link "C++ Tutorial" [ref=e695]:
+            - /url: /cpp/default.asp
+          - link "jQuery Tutorial" [ref=e696]:
+            - /url: /jquery/default.asp
+        - generic [ref=e697]:
+          - heading "Top References" [level=5] [ref=e698]
+          - link "HTML Reference" [ref=e699]:
+            - /url: /tags/default.asp
+          - link "CSS Reference" [ref=e700]:
+            - /url: /cssref/index.php
+          - link "JavaScript Reference" [ref=e701]:
+            - /url: /jsref/default.asp
+          - link "SQL Reference" [ref=e702]:
+            - /url: /sql/sql_ref_keywords.asp
+          - link "Python Reference" [ref=e703]:
+            - /url: /python/python_reference.asp
+          - link "W3.CSS Reference" [ref=e704]:
+            - /url: /w3css/w3css_references.asp
+          - link "Bootstrap Reference" [ref=e705]:
+            - /url: /bootstrap/bootstrap_ref_all_classes.asp
+          - link "PHP Reference" [ref=e706]:
+            - /url: /php/php_ref_overview.asp
+          - link "HTML Colors" [ref=e707]:
+            - /url: /colors/colors_names.asp
+          - link "Java Reference" [ref=e708]:
+            - /url: /java/java_ref_keywords.asp
+          - link "AngularJS Reference" [ref=e709]:
+            - /url: /angularjs/angularjs_ref_directives.asp
+          - link "jQuery Reference" [ref=e710]:
+            - /url: /jquery/jquery_ref_overview.asp
+        - generic [ref=e711]:
+          - heading "Top Examples" [level=5] [ref=e712]
+          - link "HTML Examples" [ref=e713]:
+            - /url: /html/html_examples.asp
+          - link "CSS Examples" [ref=e714]:
+            - /url: /css/css_examples.asp
+          - link "JavaScript Examples" [ref=e715]:
+            - /url: /js/js_examples.asp
+          - link "How To Examples" [ref=e716]:
+            - /url: /howto/default.asp
+          - link "SQL Examples" [ref=e717]:
+            - /url: /sql/sql_examples.asp
+          - link "Python Examples" [ref=e718]:
+            - /url: /python/python_examples.asp
+          - link "W3.CSS Examples" [ref=e719]:
+            - /url: /w3css/w3css_examples.asp
+          - link "Bootstrap Examples" [ref=e720]:
+            - /url: /bootstrap/bootstrap_examples.asp
+          - link "PHP Examples" [ref=e721]:
+            - /url: /php/php_examples.asp
+          - link "Java Examples" [ref=e722]:
+            - /url: /java/java_examples.asp
+          - link "XML Examples" [ref=e723]:
+            - /url: /xml/xml_examples.asp
+          - link "jQuery Examples" [ref=e724]:
+            - /url: /jquery/jquery_examples.asp
+        - generic [ref=e725]:
+          - link [ref=e726]:
+            - /url: https://campus.w3schools.com/collections/course-catalog
+            - heading "Get Certified" [level=5] [ref=e727]
+          - link "HTML Certificate" [ref=e728]:
+            - /url: https://campus.w3schools.com/collections/certifications/products/html-certificate
+          - link "CSS Certificate" [ref=e729]:
+            - /url: https://campus.w3schools.com/collections/certifications/products/css-certificate
+          - link "JavaScript Certificate" [ref=e730]:
+            - /url: https://campus.w3schools.com/collections/certifications/products/javascript-certificate
+          - link "Front End Certificate" [ref=e731]:
+            - /url: https://campus.w3schools.com/collections/certifications/products/front-end-certificate
+          - link "SQL Certificate" [ref=e732]:
+            - /url: https://campus.w3schools.com/collections/certifications/products/sql-certificate
+          - link "Python Certificate" [ref=e733]:
+            - /url: https://campus.w3schools.com/collections/certifications/products/python-certificate
+          - link "PHP Certificate" [ref=e734]:
+            - /url: https://campus.w3schools.com/collections/certifications/products/php-certificate
+          - link "jQuery Certificate" [ref=e735]:
+            - /url: https://campus.w3schools.com/collections/certifications/products/jquery-certificate
+          - link "Java Certificate" [ref=e736]:
+            - /url: https://campus.w3schools.com/collections/certifications/products/java-certificate
+          - link "C++ Certificate" [ref=e737]:
+            - /url: https://campus.w3schools.com/collections/certifications/products/c-certificate
+          - link "C# Certificate" [ref=e738]:
+            - /url: https://campus.w3schools.com/collections/certifications/products/c-certificate-1
+          - link "XML Certificate" [ref=e739]:
+            - /url: https://campus.w3schools.com/collections/certifications/products/xml-certificate
+      - generic [ref=e740]:
+        - link "" [ref=e741]:
+          - /url: https://www.youtube.com/@w3schools
+        - link "" [ref=e743]:
+          - /url: https://www.linkedin.com/company/w3schools.com/
+        - link "" [ref=e745]:
+          - /url: https://discord.com/invite/w3schools
+        - link "" [ref=e747]:
+          - /url: https://www.facebook.com/w3schoolscom/
+        - link "" [ref=e749]:
+          - /url: https://www.instagram.com/w3schools.com_official/
+        - link "FORUM" [ref=e751]:
+          - /url: /forum/index.php
+        - link "ABOUT" [ref=e752]:
+          - /url: /about/default.asp
+        - link "CAMPUS" [ref=e753]:
+          - /url: https://campus.w3schools.com/pages/for-teams
+      - generic [ref=e754]:
+        - text: W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our
+        - link "terms of use" [ref=e755]:
+          - /url: /about/about_copyright.asp
+        - text: ", cookies and"
+        - link "privacy policy" [ref=e756]:
+          - /url: /about/about_privacy.asp
+        - text: .
+        - link "Copyright 1999-2026" [ref=e757]:
+          - /url: /about/about_copyright.asp
+        - text: by Refsnes Data. All Rights Reserved.
+        - link "W3Schools is Powered by W3.CSS" [ref=e758]:
+          - /url: //www.w3schools.com/w3css/default.asp
+        - text: .
+```
+
+# Test source
+
+```ts
+  1 | import {test} from '@playwright/test';
+  2 | test('TC003' , async({page})=> {
+  3 |     await page.goto("https://www.w3schools.com");
+  4 |     console.log("W3 Schools opened");
+  5 |     await page.waitForTimeout(3000);
+> 6 |     await page.locator("//a[@title = 'HTML Tutorial']").click();
+    |                                                         ^ Error: locator.click: Error: strict mode violation: locator('//a[@title = \'HTML Tutorial\']') resolved to 3 elements:
+  7 |     await page.waitForTimeout(3000);
+  8 | }
+  9 | );
+```
